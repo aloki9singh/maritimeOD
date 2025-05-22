@@ -16,7 +16,9 @@ connectDB()
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/ships', shipRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Welcome to the Maritime Operations Dashboard Backend API!");
+});
 // Error Handling
 app.use(errorHandler);
 
